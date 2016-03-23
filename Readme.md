@@ -9,14 +9,32 @@ Some features:
 
 * Spark 1.6.0 with Python, Scala or R.
 * Edit notebooks using Vim keybindings.
+* SQLAlchemy and [psycopg2](http://initd.org/psycopg/) to connect to Postgres with
+    Pandas.
 * JDBC driver for Postgres 9.4.
 
-## Postgres driver usage
+## SQLAlchemy for Postgres
+
+```python
+import pandas as pd
+from sqlalchemy import create_engine
+from pyspark import SparkContext
+from pyspark.sql import SQLContext
+
+sc = SparkContext("local[*]")
+sqlsc = SQLContext(sc)
+
+## Connection to a local PostgreSQL.
+pgeng = create_engine('postgresql://postgres:postgres@localhost:5432/postgres')
+
+pd.read_sql("select * from SOME_TABLE;", pgeng)
+```
+
+## Postgres JDBC driver
 
 An example of usage in Python:
 
 ```python
-import os
 from pyspark import SparkContext
 from pyspark.sql import SQLContext
 
