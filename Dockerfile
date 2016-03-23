@@ -31,7 +31,7 @@ USER root
 ENV SPARK_CLASSPATH /home/jovyan/drivers/postgresql-9.4.1208.jre7.jar
 
 ## Increasing the available JVM memory.
-ENV SPARK_OPTS --driver-java-options=-Dlog4j.logLevel=info --driver-java-options=-Xms4G --driver-java-options=-Xmx5G
+ENV SPARK_DRIVER_MEMORY 4g
 
 USER jovyan
 

@@ -12,6 +12,7 @@ Some features:
 * SQLAlchemy and [psycopg2](http://initd.org/psycopg/) to connect to Postgres with
     Pandas.
 * JDBC driver for Postgres 9.4.
+* The default amount of memory for Driver is 4G.
 
 ## SQLAlchemy for Postgres
 
