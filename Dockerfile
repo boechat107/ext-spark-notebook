@@ -9,7 +9,7 @@ RUN mkdir -p $(jupyter --data-dir)/nbextensions && \
     git clone https://github.com/lambdalisue/jupyter-vim-binding.git vim_binding
 
 ## Python libraries to connect to SQL databases.
-RUN conda install -n python2 psycopg2 SQLAlchemy
+RUN conda install --yes -n python2 psycopg2 SQLAlchemy
 
 ## Downloading jdbc driver for Postgres
 RUN cd $HOME && \
