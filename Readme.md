@@ -13,6 +13,11 @@ Some features:
     Pandas.
 * JDBC driver for Postgres 9.4.
 * The default amount of memory for Driver is 4G.
+* Some small style modifications:
+    * Smaller font size for the code blocks.
+    * Different style for inline code in Markdown blocks.
+
+![screenshot](screenshot.png)
 
 ## SQLAlchemy for Postgres
 

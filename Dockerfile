@@ -17,6 +17,11 @@ RUN cd $HOME && \
     cd drivers && \
     wget https://jdbc.postgresql.org/download/postgresql-9.4.1208.jre7.jar
 
+## Adding custom CSS for the notebooks.
+RUN cd $HOME/.jupyter && \
+    mkdir custom
+COPY ./custom.css /home/jovyan/.jupyter/custom/custom.css
+
 USER root
 
 ## The following variables didn't work to load the Postgres driver with the Spark

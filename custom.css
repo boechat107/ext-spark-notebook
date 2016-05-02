@@ -1,0 +1,20 @@
+/* Changing appearance of inline code in Markdown rendered boxes. */
+.rendered_html pre,
+.rendered_html code {
+    background-color: #f8f9f9;
+    border: 1px solid #d6dadc;
+    border-color: #e2e4e6;
+    padding: 1px 3px;
+    margin: -1px 2px;
+}
+
+/* Font size of rendered code. */
+.CodeMirror pre, .CodeMirror-dialog, .CodeMirror-dialog .CodeMirror-search-field, .terminal-app
+ .terminal {
+    font-size: 12px;
+}
+
+/* Font size of rendered output. */
+div.output pre, div.output code {
+    font-size: 12px;
+}
